@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Home from './Pages/Home'
+import Navbar from './Components/Navbar'
+import TicketCheck from './Pages/TicketCheck'
+import Booking from './Pages/Booking'
+import { BrowserRouter as Router , Route, Switch} from 'react-router-dom';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import 'bootstrap/dist/css/bootstrap.css';
 function App() {
+
+  const theme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        'Kumbh Sans',
+        'Prompt'].join(','),
+    }
+  });
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <div className="App">
+        <Router>
+          <Navbar />
+          <div className="container">
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route exact path='/TicketChecking' component={TicketCheck} />
+              <Route exact path='/Booking' component={Booking} />
+            </Switch>
+          </div>
+        </Router>
+      </div>
+    </MuiThemeProvider>
   );
 }
 

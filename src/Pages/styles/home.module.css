@@ -1,0 +1,344 @@
+.section {
+	position: relative;
+	height: 100vh;
+	margin-top: 5rem;
+}
+
+.section .sectioncenter {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#booking {
+	font-family: 'Raleway', sans-serif;
+}
+
+.bookingform {
+	position: relative;
+	max-width: 768px;
+	width: 100%;
+	margin: auto;
+	background: #1a1b1d;
+}
+
+.bookingform>.bookingbg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 310px;
+	background-image: url('../../img/background.jpg');
+	background-size: cover;
+	background-position: center;
+}
+.bookingform>.booking1bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 310px;
+	 background-image: url('../../img/background1.jpg'); 
+	background-size: cover;
+	background-position: center;
+}
+
+.bookingform>.booking33bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 310px;
+	 background-image: url('../../img/background33.jpg'); 
+	background-size: cover;
+	background-position: center;
+}
+.bookingform>.img1bg {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	width: 310px;
+	 background-image: url('../../img/img1.jpg'); 
+	background-size: cover;
+	background-position: center;
+}
+
+.bookingform>form {
+	margin-left: 310px;
+	padding: 30px;
+}
+
+.bookingform .formheader {
+	margin-bottom: 25px;
+}
+
+.bookingform .formheader h2 {
+	margin: 0;
+	font-weight: 400;
+	color: #fff;
+	font-size: 42px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.bookingform .formgroup {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.bookingform .formcontrol {
+	background-color: transparent;
+	height: 65px;
+	padding: 0px;
+	padding-top: 15px;
+	border-radius: 0px;
+	-webkit-transition: 0.2s;
+	transition: 0.2s;
+	color: #fff;
+	border: 0px;
+	font-size: 16px;
+	font-weight: 700;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	text-transform: capitalize;
+	border-bottom: 2px solid #cecccd;
+}
+
+.bookingform .formcontrol::-webkit-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.bookingform .formcontrol:-ms-input-placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.bookingform .formcontrol::placeholder {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.bookingform input[type="date"].formcontrol:invalid,
+.bookingform input[type="time"].formcontrol:invalid {
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.bookingform select.formcontrol {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.bookingform select.formcontrol option {
+	color: #1a1b1d;
+}
+
+.bookingform select.formcontrol+.selectarrow {
+	position: absolute;
+	right: 0px;
+	bottom: 4px;
+	width: 32px;
+	line-height: 32px;
+	height: 32px;
+	text-align: center;
+	pointer-events: none;
+}
+
+.bookingform select.formcontrol+.selectarrow:after {
+	content: '\279C';
+	display: block;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	color: #cecccd;
+	font-size: 14px;
+}
+
+.bookingform select.formcontrol~.formlabel {
+	opacity: 1;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.bookingform .formlabel {
+	color: #ffc600;
+	font-weight: 700;
+	line-height: 24px;
+	height: 24px;
+	font-size: 14px;
+	position: absolute;
+	left: 0;
+	top: 26px;
+	opacity: 0;
+	text-transform: capitalize;
+	pointer-events: none;
+	-webkit-transition: 0.2s all;
+	transition: 0.2s all;
+}
+
+.bookingform .formgroup:not(.input-not-empty) .formcontrol:not(:focus) {
+	color: transparent;
+}
+
+.bookingform input[type="date"].formcontrol+.formlabel,
+.bookingform input[type="time"].formcontrol+.formlabel {
+	color: rgba(255, 255, 255, 0.3);
+	opacity: 1;
+}
+
+.bookingform input[type="date"].formcontrol:focus+.formlabel,
+.bookingform input[type="time"].formcontrol:focus+.formlabel {
+	opacity: 1;
+	top: 0px;
+	color: #ffc600 !important;
+}
+
+.bookingform .formgroup.inputnotempty .formlabel {
+	opacity: 1;
+	top: 0px;
+	color: #ffc600 !important;
+}
+
+.bookingform .formbtn {
+	margin-top: 25px;
+}
+
+.bookingform .submitbtn {
+	color: #0dad28;
+	background-color: #1a1b1d;
+	font-weight: 700;
+	height: 55px;
+	padding: 10px 35px;
+	font-size: 18px;
+	border-radius: 0px;
+	width: 100%;
+	border: 2px solid #0dad28;
+}
+
+.bookingform .submitDbtn {
+	color: #ffc600;
+	background-color: #1a1b1d;
+	font-weight: 700;
+	height: 55px;
+	padding: 10px 35px;
+	font-size: 18px;
+	border-radius: 0px;
+	width: 100%;
+	border: 2px solid #ffc600;
+}
+
+.bookingform .submitCbtn {
+	color: #c40a0a;
+	background-color: #1a1b1d;
+	font-weight: 700;
+	height: 55px;
+	padding: 10px 35px;
+	font-size: 18px;
+	border-radius: 0px;
+	width: 100%;
+	border: 2px solid #c40a0a;
+}
+
+@media only screen and (max-width: 480px) {
+	.booking-form>.booking-bg {
+		display: none;
+	}
+	.booking-form>form {
+		margin-left: 0px;
+	}
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshowcontainer {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
