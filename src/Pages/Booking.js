@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import { Form,FormControl } from 'react-bootstrap';
 import classes from './styles/Booking.module.css';
 import axios from 'axios';
+import swal from 'sweetalert';
 const Booking = () => {
 
     const [formData,SetFormData] = useState({
@@ -41,8 +42,20 @@ const Booking = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        console.log(formData)
+        
+        axios.post('http://localhost:8071/addTicket',formData)
+        .then((doc) => {
+            if(doc.data === "ขออภัยจำนวนที่นั่งไม่พอค่ะ"){
+                swal(`${doc.data}`,"","error")
+            }else{
+                swal(`จองที่นั่งสำเร็จ!`, `รหัสที่นั่ง : ${doc.data}`,"success");
+            }
+            
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        //console.log(formData)
 
     }
 
