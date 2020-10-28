@@ -5,7 +5,6 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
-import { Form,FormControl } from 'react-bootstrap';
 import classes from './styles/Booking.module.css';
 import axios from 'axios';
 import swal from 'sweetalert';
@@ -48,7 +47,8 @@ const Booking = () => {
             if(doc.data === "ขออภัยจำนวนที่นั่งไม่พอค่ะ"){
                 swal(`${doc.data}`,"","error")
             }else{
-                swal(`จองที่นั่งสำเร็จ!`, `รหัสที่นั่ง : ${doc.data}`,"success");
+                swal(`ทำการจองสำเร็จ!`, `รหัสที่นั่ง : ${doc.data}`, 
+                "success");
             }
             
         })
