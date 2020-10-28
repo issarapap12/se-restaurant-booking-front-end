@@ -1,5 +1,7 @@
 import React from 'react'
 import classes from './styles/home.module.css'
+import { MenuItem } from '@material-ui/core';
+import Link from 'react-router-dom/Link';
 const Home = () => {
     return (
         
@@ -14,10 +16,10 @@ const Home = () => {
 									<h2>Sushikung</h2>
 								</div>
 								<div className={classes.formbtn}>
-									<button className={classes.submitbtn} href =''>Book Now</button>
+									<Link to="/Booking"><button className={classes.submitbtn} >จองที่นั่ง</button></Link>
 								</div>
 								<div className={classes.formbtn}>
-									<button className={classes.submitDbtn} href =''>Detail</button>
+									<Link to="/TicketChecking"><button className={classes.submitDbtn} >ตรวจสอบรายละเอียดการจอง</button></Link>
 								</div>
 							</form>
 						</div>
